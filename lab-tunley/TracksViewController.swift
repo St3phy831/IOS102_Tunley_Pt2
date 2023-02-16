@@ -61,6 +61,16 @@ class TracksViewController: UIViewController, UITableViewDataSource {
                 // Access the array of tracks from the `results` property
                 let tracks = response.results
                 print("✅ \(tracks)")
+                
+                // Execute UI updates on the main thread when calling from a background callback
+                DispatchQueue.main.async {
+
+                    // Set the view controller's tracks property as this is the one the table view references
+                    self?.tracks = tracks
+
+                    // Make the table view reload now that we have new data
+                    self?.tableView.reloadData()
+                }
             } catch {
                 print("❌ Error parsing JSON: \(error.localizedDescription)")
             }
