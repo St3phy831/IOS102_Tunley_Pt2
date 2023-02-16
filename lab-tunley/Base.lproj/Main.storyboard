@@ -233,6 +233,22 @@
             </objects>
             <point key="canvasLocation" x="2750.3816793893129" y="3.5211267605633805"/>
         </scene>
+        <!--Albums-->
+        <scene sceneID="LZg-zV-OfO">
+            <objects>
+                <viewController id="8qs-cW-55i" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8qv-0X-eO1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="F0u-0p-Idj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Albums" id="sfj-Sg-alI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLl-Yd-YFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2052.6717557251909" y="-648.59154929577471"/>
+        </scene>
         <!--Tracks-->
         <scene sceneID="pe2-cI-OjY">
             <objects>
@@ -263,14 +279,35 @@
                     </tabBar>
                     <connections>
                         <segue destination="UX2-aM-6IO" kind="relationship" relationship="viewControllers" id="myA-vo-bqA"/>
+                        <segue destination="CEj-PM-Sxh" kind="relationship" relationship="viewControllers" id="ENh-xb-brz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDX-hn-sxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200.76335877862596" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="289" y="-303"/>
+        </scene>
+        <!--Albums-->
+        <scene sceneID="XIk-u1-4Yc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CEj-PM-Sxh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Albums" image="guitars.fill" catalog="system" id="odN-kF-X6n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6nb-iy-uR3">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8qs-cW-55i" kind="relationship" relationship="rootViewController" id="DyJ-V0-niq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J6v-Yt-xFV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1126" y="-649"/>
         </scene>
     </scenes>
     <resources>
+        <image name="guitars.fill" catalog="system" width="128" height="98"/>
         <image name="music.note.list" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
