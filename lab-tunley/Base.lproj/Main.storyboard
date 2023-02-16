@@ -252,13 +252,27 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9cu-o8-Tvb">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AlbumCell" id="9cu-o8-Tvb" customClass="AlbumCell" customModule="lab_tunley" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QBS-1a-ilY">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="het-d2-ntt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="het-d2-ntt" secondAttribute="trailing" id="YOw-hd-kPC"/>
+                                                <constraint firstItem="het-d2-ntt" firstAttribute="leading" secondItem="QBS-1a-ilY" secondAttribute="leading" id="ffr-Np-6kk"/>
+                                                <constraint firstAttribute="bottom" secondItem="het-d2-ntt" secondAttribute="bottom" id="hTU-lN-Q25"/>
+                                                <constraint firstItem="het-d2-ntt" firstAttribute="top" secondItem="QBS-1a-ilY" secondAttribute="top" id="oBe-WE-sSl"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumImageView" destination="het-d2-ntt" id="db9-lh-NKn"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
