@@ -287,6 +287,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Albums" id="sfj-Sg-alI"/>
+                    <connections>
+                        <outlet property="collectionView" destination="MPY-u1-B4n" id="SDU-Iw-lmG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cLl-Yd-YFo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
